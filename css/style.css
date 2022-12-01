@@ -1,0 +1,1029 @@
+@charset "UTF-8";
+/*
+Template Name: Wali Ullah Shuvo - CSS Template
+Version: 1.0
+Author: Wali Ullah Shuvo (zero_this). 
+*/
+/*  Google fonts  : Poppins , Montserrat  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/*=================================================================*/
+/*                      BASE                              
+/*=================================================================*/
+
+:root {
+    --body-bg-color: #E7E7E7;
+    --primary-text-color: white;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0 !important;
+    overflow: auto !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0px 5%;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*=================================================================*/
+/*                      TYPOGRAPHY                              
+/*=================================================================*/
+h1,
+h3 {
+    color: var(--primary-text-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 62px;
+    line-height: 80px;
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+}
+
+blockquote {
+    padding: 20px 20px;
+    margin: 0 0 20px;
+    font-size: 16px;
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+
+blockquote p {
+    line-height: 1.6;
+}
+
+p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #3e3e46;
+    line-height: 30px;
+}
+
+
+/*=================================================================*/
+/*                      TYPOGRAPHY                              
+/*=================================================================*/
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.smily-face {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 3%;
+    top: 30px;
+}
+
+.box {
+    background-color: #FBFDFF;
+    width: 100%;
+    min-height: 620px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-half {
+    width: 50%;
+}
+
+.shape {
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    min-width: 65%;
+    transition: 0.5s all;
+    animation: rotate-shape 6s infinite linear;
+}
+
+
+svg {
+    max-width: 100%;
+}
+
+#stop-1 {
+    transition: 0.5s all;
+    animation: change-color-1 6s infinite linear;
+}
+
+#stop-2 {
+    transition: 0.5s all;
+    animation: change-color-2 6s infinite linear;
+}
+
+.product-1-img {
+    position: absolute;
+    height: 350px;
+    z-index: 1;
+    top: 90px;
+    left: 15%;
+    transition: 0.5s all;
+    animation: product-1-img 6s infinite linear;
+}
+
+.product-2-img {
+    position: absolute;
+    height: 400px;
+    z-index: 1;
+    top: 60px;
+    left: 25%;
+    transition: 0.5s all;
+    animation: product-2-img 6s infinite linear;
+}
+
+
+.product-3-img {
+    position: absolute;
+    width: 350px;
+    z-index: 1;
+    top: 150px;
+    left: 19%;
+    transition: 0.5s all;
+    animation: product-3-img 6s infinite linear;
+}
+
+
+
+.product-img-ball-1 {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+
+
+.product-1::before {
+    content: "";
+    background-image: url('../assets/img/ball-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    z-index: 10;
+    left: 25%;
+    transition: 0.5s all;
+    animation: product-img-ball-1 6s infinite linear;
+}
+
+.product-1::after {
+    content: "";
+    background-image: url('../assets/img/ball-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    bottom: 20%;
+    z-index: 10;
+    left: 18%;
+    transition: 0.5s all;
+    animation: product-img-ball-2 6s infinite linear;
+}
+
+
+
+.product-2::after {
+    content: "";
+    background-image: url('../assets/img/cloud.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 204px;
+    height: 168px;
+    position: absolute;
+    bottom: 25%;
+    z-index: 10;
+    left: 15%;
+    transition: 0.5s all;
+    animation: product-img-cloud 6s infinite linear;
+}
+
+.product-3::before {
+    content: "";
+    background-image: url('../assets/img/pillow.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    z-index: 10;
+    left: 25%;
+    top: 8%;
+    transition: 0.5s all;
+    animation: product-img-pillow 6s infinite linear;
+}
+
+
+.product-3::after {
+    content: "";
+    background-image: url('../assets/img/teniss.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 124px;
+    height: 124px;
+    position: absolute;
+    bottom: 25%;
+    z-index: 10;
+    left: 15%;
+    transition: 0.5s all;
+    animation: product-img-pillow 6s infinite linear;
+}
+
+
+
+.product-img-ball-2 {
+    width: 100px;
+    position: absolute;
+    left: 20%;
+    z-index: 10;
+}
+
+.product-title {
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    max-width: 120px;
+    text-align: center;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    /* border: 2px white solid; */
+}
+
+
+.product-title h1 {
+    margin-right: 20px;
+    transition: 0.5s all;
+    animation: text-slide 6s infinite linear;
+}
+
+.content {
+    padding: 5% 2%;
+    width: 50%;
+}
+
+.product-subtitle {
+    font-family: 'Montserrat';
+    color: #020000;
+    position: relative;
+    margin-top: 3%;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+
+table {
+    width: 100%;
+    text-align: left;
+    padding-top: 20px;
+    border: none;
+    font-family: 'Montserrat';
+}
+
+th {
+    font-weight: 500;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    color: gray;
+    padding: 20px 0px;
+}
+
+
+td {
+    padding: 20px 10px;
+}
+
+
+tr:nth-child(2n) {
+    background-color: #EFECF0;
+}
+
+
+.phases {
+    display: flex;
+    align-items: center;
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+}
+
+
+.active-phase-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DDE0E1;
+    cursor: pointer;
+}
+
+
+.active-phase-btn ion-icon {
+    font-size: 22px;
+}
+
+.phase-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 30px;
+    position: relative;
+    /* background-color: #20BF43; */
+}
+
+
+.phase-btn::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    height: 1.7px;
+    width: 20px;
+    background-color: gray;
+    margin: 10px;
+}
+
+
+.phase-btn ion-icon {
+    color: gray;
+    font-size: 22px;
+}
+
+
+.menu-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #DDE0E1;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+
+.menu-btn ion-icon {
+    font-size: 22px;
+    color: rgb(58, 59, 80);
+}
+
+
+.options {
+    background-color: white;
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    /* width: 180px; */
+    justify-content: space-between;
+    box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.15);
+    border-radius: 80px;
+    position: absolute;
+    bottom: 40px;
+    left: 40%;
+}
+
+.v-line {
+    width: 1px;
+    height: 40px;
+    background-color: #3e3e46;
+    border-radius: 10px;
+    margin: 0px 15px;
+}
+
+
+.option-btn {
+    margin: 0px 15px;
+}
+
+.option-btn ion-icon {
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.next-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background: #3e3e46;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0px 15px;
+}
+
+
+.table {
+    width: 100%;
+}
+
+
+.tbody-container {
+    position: relative;
+    display: flex;
+    /* transform: translateX(-115%); */
+}
+
+.thead {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.thead p {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+
+
+.tbody {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.t-rows-container {
+    width: 90%;
+    overflow: hidden;
+}
+
+.t-rows {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+
+.t-row {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    transition: 0.5s all;
+    animation: slide-row 6s infinite linear;
+    display: flex;
+    align-items: center;
+    left: var(--left-position);
+}
+
+
+.t-col-1 {
+    width: 40%;
+    color: #020000;
+    font-size: 18px;
+}
+
+.t-col-2 {
+    width: 30%;
+}
+
+.t-col-3 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.action-btn {
+    width: 10%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+@keyframes rotate-shape {
+    /* 23 -> 23+120 -> 240+23 -> 23 */
+    /* 100%/3 = 33.3% start from 0% going to 100% :0 -> 33.3 -> 66.6 -> 100% */
+    /* in total we have 6s : 0.6s  = 10% */
+    /* first stop after changing is 0+20 =20 , 33.33+20 = 53.33 , 66.66+20 = 86.66 */
+    /*  3stops*0.6s = 3s , left time for animation is 2s (not enaugh)  */
+    /* hahhah another error is not start + percentege it's the opposite  */
+    /* first stop after changing is 33.33-10 =23.33 , 66.66-10 = 56.66 , 100-10 = 90 */
+
+    /* NOTIC : the correct degre for the new shape is 60" */
+    0% {
+        transform: rotate(0deg);
+    }
+
+    23.33% {
+        transform: rotate(0deg);
+    }
+
+    33.3% {
+        transform: rotate(60deg);
+    }
+
+    56.66% {
+        transform: rotate(60deg);
+    }
+
+    66.6% {
+        transform: rotate(120deg);
+    }
+
+    90% {
+        transform: rotate(120deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes product-1-img {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: -100px;
+        filter: opacity(1);
+    }
+
+    23.33% {
+        transform: rotate(0deg) translateY(50px);
+        transform-origin: -100px;
+        filter: opacity(1);
+    }
+
+    33.3% {
+        transform: rotate(180deg);
+        transform-origin: -100px;
+    }
+
+    56.66% {
+        transform: rotate(180deg);
+        transform-origin: -100px;
+        filter: opacity(0);
+    }
+
+    66.6% {
+        transform: rotate(180deg);
+        transform-origin: -100px;
+        filter: opacity(0);
+    }
+
+    90% {
+        transform: rotate(180deg);
+        transform-origin: -100px;
+        filter: opacity(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: -100px;
+    }
+}
+
+@keyframes product-2-img {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    23.33% {
+        transform: rotate(-360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    33.3% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    56.66% {
+        transform: rotate(0deg) translateY(50px);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    66.6% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    90% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+}
+
+
+@keyframes product-3-img {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    23.33% {
+        transform: rotate(-360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    33.3% {
+        transform: rotate(-360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    56.66% {
+        transform: rotate(-360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    66.6% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    90% {
+        transform: rotate(0deg) translateY(50px);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+}
+
+
+
+
+@keyframes product-img-cloud {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    23.33% {
+        transform: rotate(-360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    33.3% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    56.66% {
+        transform: rotate(0deg) translateY(60px) translateX(-20px);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    66.6% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    90% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: top;
+        filter: opacity(0);
+    }
+}
+
+@keyframes product-img-ball-1 {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    23.33% {
+        transform: rotate(0deg) translateY(60px) translateX(10px);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    33.3% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+    }
+
+    56.66% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    66.6% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    90% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: -200px;
+    }
+}
+
+@keyframes product-img-ball-2 {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    23.33% {
+        transform: rotate(0deg) translateY(60px) translateX(-10px);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    33.3% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+    }
+
+    56.66% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    66.6% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    90% {
+        transform: rotate(180deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: -200px;
+    }
+}
+
+
+@keyframes product-img-pillow {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    23.33% {
+        transform: rotate(-360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    33.3% {
+        transform: rotate(-360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    56.66% {
+        transform: rotate(-360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+
+    66.6% {
+        transform: rotate(0deg);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    90% {
+        transform: rotate(0deg) translateX(10px) translateY(40px);
+        transform-origin: -200px;
+        filter: opacity(1);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: -200px;
+        filter: opacity(0);
+    }
+}
+
+
+@keyframes change-color-1 {
+
+    /* we have 3 colors  : 100/3 = 0.33 */
+    /* so : from 0 to 100% is : 0% 33.33% 66.66% 100% */
+    0% {
+        stop-color: #F09A50;
+    }
+
+    23.33% {
+        stop-color: #F09A50;
+    }
+
+    33.3% {
+        stop-color: #5BF2CC;
+    }
+
+    56.66% {
+        stop-color: #5BF2CC;
+    }
+
+    66.66% {
+        stop-color: #6F63C0;
+    }
+
+    90% {
+        stop-color: #6F63C0;
+    }
+
+    100% {
+        stop-color: #d6a954;
+    }
+}
+
+@keyframes change-color-2 {
+    0% {
+        stop-color: #FDE36C;
+    }
+
+    23.33% {
+        stop-color: #FDE36C;
+    }
+
+    33.33% {
+        stop-color: #57EFEA;
+    }
+
+    56.66% {
+        stop-color: #57EFEA;
+    }
+
+    66.66% {
+        stop-color: #A689F3;
+    }
+
+    90% {
+        stop-color: #A689F3;
+    }
+
+    100% {
+        stop-color: #f1de7d;
+    }
+}
+
+
+@keyframes text-slide {
+    0% {
+        transform: translateX(0px);
+    }
+
+    3% {
+        transform: translateX(-170px);
+    }
+
+    23.33% {
+        transform: translateX(-170px);
+    }
+
+    33.33% {
+        transform: translateX(-340px);
+    }
+
+    56.66% {
+        transform: translateX(-340px);
+    }
+
+    66.66% {
+        transform: translateX(-520px);
+    }
+
+    90% {
+        transform: translateX(-520px);
+    }
+
+    100% {
+        transform: translateX(-520px);
+    }
+}
+
+
+@keyframes slide-row {
+    0% {
+        transform: translateX(0px);
+    }
+
+    3% {
+        transform: translateX(-100%);
+    }
+
+    23.33% {
+        transform: translateX(-100%);
+    }
+
+    33.33% {
+        transform: translateX(-200%);
+    }
+
+    56.66% {
+        transform: translateX(-200%);
+    }
+
+    66.66% {
+        transform: translateX(-300%);
+    }
+
+    90% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
